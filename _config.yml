@@ -8,11 +8,8 @@ execute:
 
 sphinx:
   config:
-    html_baseurl: "$READTHEDOCS_OUTPUT/html"  # Adjust this for Read the Docs
-    html_baseurl: "https://<your-readthedocs-project>.readthedocs.io"
-    # https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html#implicit-targets
-    myst_heading_anchors: 4
-    # https://jupyterbook.org/en/stable/interactive/interactive.html#plotly
+    html_baseurl: "$READTHEDOCS_OUTPUT/html"  
+    myst_heading_anchors: 4  
     html_js_files:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
-    suppress_warnings: ["mystnb.unknown_mime_type"]
+    suppress_warnings: ["mystnb.unknown_mime_type"] 
