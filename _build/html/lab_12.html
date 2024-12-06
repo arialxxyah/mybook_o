@@ -1,0 +1,1492 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Lab 12 &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lab_12';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to My Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Project_1.html">Step 1</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Project_2.html">Using datasets from the U.S. Department of Education and labor market statistics, I will analyze the trends in computer science graduates from 1970 to 2023 and compare them with the growth in the number of jobs in the technology sector. This analysis will explore the relationship between the supply of graduates and the demand for tech professionals over time.</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/lab_12.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lab 12</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scraping">Scraping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fec-data">FEC data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#querying">Querying</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pagination">Pagination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterbook">JupyterBook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#config">Config</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-site">Build the site</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-site-locally">View the site (locally)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-changes">Commit changes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;vscode+jupyterlab+notebook_connected&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="lab-12">
+<h1>Lab 12<a class="headerlink" href="#lab-12" title="Permalink to this heading">#</a></h1>
+<p><em><a class="reference external" href="https://computing-in-context.afeld.me/notebooks.html">General notebook information</a></em></p>
+<p>You’ll need to <a class="reference external" href="https://computing-in-context.afeld.me/notebooks.html#installing-packages">install</a> <a class="reference external" href="https://anaconda.org/conda-forge/lxml"><code class="docutils literal notranslate"><span class="pre">lxml</span></code></a> and <a class="reference external" href="https://anaconda.org/conda-forge/requests"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a>.</p>
+<section id="scraping">
+<h2>Scraping<a class="headerlink" href="#scraping" title="Permalink to this heading">#</a></h2>
+<p>Common tools:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/beautiful-soup-web-scraper-python/">Beautiful Soup package</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/io.html#html">pandas’ <code class="docutils literal notranslate"><span class="pre">read_html()</span></code></a></p></li>
+</ul>
+<p>Pull <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area#Countries_and_dependencies_by_area">Wikipedia’s list of countries by area</a> into a DataFrame using <code class="docutils literal notranslate"><span class="pre">read_html()</span></code>.</p>
+<div class="cell tag_solution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area&quot;</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s2">&quot;Country / dependency&quot;</span><span class="p">)</span>
+<span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Country / dependency</th>
+      <th>Total in km2 (mi2)</th>
+      <th>Land in km2 (mi2)</th>
+      <th>Water in km2 (mi2)</th>
+      <th>% water</th>
+      <th>Unnamed: 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>–</td>
+      <td>Earth</td>
+      <td>510,072,000 (196,940,000)</td>
+      <td>148,940,000 (57,506,000)</td>
+      <td>361,132,000 (139,434,000)</td>
+      <td>70.8</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Russia</td>
+      <td>17,098,246 (6,601,667)</td>
+      <td>16,376,870 (6,323,142)</td>
+      <td>721,380 (278,530)</td>
+      <td>4.2</td>
+      <td>[b]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>–</td>
+      <td>Antarctica</td>
+      <td>14,200,000 (5,480,000)</td>
+      <td>14,200,000 (5,480,000)</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>[c]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>Canada</td>
+      <td>9,984,670 (3,855,100)</td>
+      <td>9,093,507 (3,511,021)</td>
+      <td>891,163 (344,080)</td>
+      <td>8.9</td>
+      <td>[d]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3/4 [e]</td>
+      <td>China</td>
+      <td>9,596,960 (3,705,410)</td>
+      <td>9,326,410 (3,600,950)</td>
+      <td>270,550 (104,460)</td>
+      <td>2.8</td>
+      <td>[f]</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>–</td>
+      <td>Ashmore and Cartier Islands (Australia)</td>
+      <td>5.0 (1.9)</td>
+      <td>5.0 (1.9)</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>[q]</td>
+    </tr>
+    <tr>
+      <th>260</th>
+      <td>–</td>
+      <td>Coral Sea Islands (Australia)</td>
+      <td>3.0 (1.2)</td>
+      <td>3.0 (1.2)</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>[db]</td>
+    </tr>
+    <tr>
+      <th>261</th>
+      <td>–</td>
+      <td>Spratly Islands (disputed)</td>
+      <td>2.0 (0.77)</td>
+      <td>2.0 (0.77)</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>[54]</td>
+    </tr>
+    <tr>
+      <th>262</th>
+      <td>194</td>
+      <td>Monaco</td>
+      <td>2.0 (0.77)</td>
+      <td>2.0 (0.77)</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>[dc]</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>195</td>
+      <td>Vatican City</td>
+      <td>0.49 (0.19)</td>
+      <td>0.49 (0.19)</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>[dd]</td>
+    </tr>
+  </tbody>
+</table>
+<p>264 rows × 7 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="fec-data">
+<h2>FEC data<a class="headerlink" href="#fec-data" title="Permalink to this heading">#</a></h2>
+<p>We’ll make an API call in the browser.</p>
+<ol class="arabic simple">
+<li><p>Visit <a class="reference external" href="https://www.fec.gov/data/candidates/">https://www.fec.gov/data/candidates/</a></p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#how_to_open_the_devtools_in_your_browser">Open Developer Tools</a>.</p></li>
+<li><p>Reload the page.</p></li>
+<li><p>In the Network tab’s request list:</p>
+<ol class="arabic simple">
+<li><p>Filter to Fetch/XHR/AJAX (terminology will differ by browser)</p></li>
+<li><p>Right-click the API call row.</p></li>
+</ol>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">in</span> <span class="pre">New</span> <span class="pre">Tab</span></code>. You will see an error.</p></li>
+<li><p>In the URL bar, replace the <code class="docutils literal notranslate"><span class="pre">api_key</span></code> value with <code class="docutils literal notranslate"><span class="pre">DEMO_KEY</span></code>. The URL should therefore contain <code class="docutils literal notranslate"><span class="pre">api_key=DEMO_KEY</span></code>.</p></li>
+</ol>
+<p>You should see a big wall of JSON data.</p>
+<section id="querying">
+<h3>Querying<a class="headerlink" href="#querying" title="Permalink to this heading">#</a></h3>
+<p>Retrieve candidates who have raised funds. <a class="reference external" href="https://api.open.fec.gov/developers/">API documentation.</a></p>
+<div class="cell tag_solution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.open.fec.gov/v1/candidates/&quot;</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;has_raised_funds&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO_KEY&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;api_version&#39;: &#39;1.0&#39;,
+ &#39;pagination&#39;: {&#39;count&#39;: 26222,
+  &#39;is_count_exact&#39;: True,
+  &#39;page&#39;: 1,
+  &#39;pages&#39;: 1312,
+  &#39;per_page&#39;: 20},
+ &#39;results&#39;: [{&#39;active_through&#39;: 2022,
+   &#39;candidate_id&#39;: &#39;H2CO07170&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [2022, 2024],
+   &#39;district&#39;: &#39;07&#39;,
+   &#39;district_number&#39;: 7,
+   &#39;election_districts&#39;: [&#39;07&#39;],
+   &#39;election_years&#39;: [2022],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2021-12-27&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;O&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Open seat&#39;,
+   &#39;last_f2_date&#39;: &#39;2022-08-10&#39;,
+   &#39;last_file_date&#39;: &#39;2022-08-10&#39;,
+   &#39;load_date&#39;: &#39;2023-03-09T10:16:03&#39;,
+   &#39;name&#39;: &#39;AADLAND, ERIK&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;CO&#39;},
+  {&#39;active_through&#39;: 2022,
+   &#39;candidate_id&#39;: &#39;H2UT03280&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [2022],
+   &#39;district&#39;: &#39;03&#39;,
+   &#39;district_number&#39;: 3,
+   &#39;election_districts&#39;: [&#39;03&#39;],
+   &#39;election_years&#39;: [2022],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2020-03-24&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2022-03-21&#39;,
+   &#39;last_file_date&#39;: &#39;2022-03-21&#39;,
+   &#39;load_date&#39;: &#39;2022-04-13T21:10:09&#39;,
+   &#39;name&#39;: &#39;AALDERS, TIM&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;UT&#39;},
+  {&#39;active_through&#39;: 2018,
+   &#39;candidate_id&#39;: &#39;S2UT00229&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [2012, 2014, 2016, 2018, 2020],
+   &#39;district&#39;: &#39;00&#39;,
+   &#39;district_number&#39;: 0,
+   &#39;election_districts&#39;: [&#39;00&#39;, &#39;00&#39;],
+   &#39;election_years&#39;: [2012, 2018],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2012-02-08&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;O&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Open seat&#39;,
+   &#39;last_f2_date&#39;: &#39;2018-04-23&#39;,
+   &#39;last_file_date&#39;: &#39;2018-04-23&#39;,
+   &#39;load_date&#39;: &#39;2019-03-27T16:02:41&#39;,
+   &#39;name&#39;: &#39;AALDERS, TIMOTHY NOEL&#39;,
+   &#39;office&#39;: &#39;S&#39;,
+   &#39;office_full&#39;: &#39;Senate&#39;,
+   &#39;party&#39;: &#39;CON&#39;,
+   &#39;party_full&#39;: &#39;CONSTITUTION PARTY&#39;,
+   &#39;state&#39;: &#39;UT&#39;},
+  {&#39;active_through&#39;: 2020,
+   &#39;candidate_id&#39;: &#39;H0TX22260&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [2020],
+   &#39;district&#39;: &#39;22&#39;,
+   &#39;district_number&#39;: 22,
+   &#39;election_districts&#39;: [&#39;22&#39;],
+   &#39;election_years&#39;: [2020],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2019-10-17&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;O&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Open seat&#39;,
+   &#39;last_f2_date&#39;: &#39;2019-10-17&#39;,
+   &#39;last_file_date&#39;: &#39;2019-10-17&#39;,
+   &#39;load_date&#39;: &#39;2020-03-18T21:13:37&#39;,
+   &#39;name&#39;: &#39;AALOORI, BANGAR REDDY&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;TX&#39;},
+  {&#39;active_through&#39;: 1978,
+   &#39;candidate_id&#39;: &#39;H6PA16106&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [1976, 1978, 1980],
+   &#39;district&#39;: &#39;16&#39;,
+   &#39;district_number&#39;: 16,
+   &#39;election_districts&#39;: [&#39;16&#39;, &#39;16&#39;],
+   &#39;election_years&#39;: [1976, 1978],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;1976-04-12&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: None,
+   &#39;incumbent_challenge_full&#39;: None,
+   &#39;last_f2_date&#39;: &#39;1978-07-05&#39;,
+   &#39;last_file_date&#39;: &#39;1978-07-05&#39;,
+   &#39;load_date&#39;: &#39;2002-03-30T00:00:00&#39;,
+   &#39;name&#39;: &#39;AAMODT, NORMAN O.&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;PA&#39;},
+  {&#39;active_through&#39;: 2012,
+   &#39;candidate_id&#39;: &#39;H2CA01110&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [2012, 2014, 2016],
+   &#39;district&#39;: &#39;01&#39;,
+   &#39;district_number&#39;: 1,
+   &#39;election_districts&#39;: [&#39;01&#39;],
+   &#39;election_years&#39;: [2012],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2012-02-22&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2012-02-22&#39;,
+   &#39;last_file_date&#39;: &#39;2012-02-22&#39;,
+   &#39;load_date&#39;: &#39;2013-04-26T09:04:30&#39;,
+   &#39;name&#39;: &#39;AANESTAD, SAMUEL&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;CA&#39;},
+  {&#39;active_through&#39;: 2018,
+   &#39;candidate_id&#39;: &#39;H8CO06237&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [2018],
+   &#39;district&#39;: &#39;06&#39;,
+   &#39;district_number&#39;: 6,
+   &#39;election_districts&#39;: [&#39;06&#39;],
+   &#39;election_years&#39;: [2018],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2017-04-26&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2017-04-26&#39;,
+   &#39;last_file_date&#39;: &#39;2017-04-26&#39;,
+   &#39;load_date&#39;: &#39;2017-08-01T20:57:28&#39;,
+   &#39;name&#39;: &#39;AARESTAD, DAVID&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;CO&#39;},
+  {&#39;active_through&#39;: 2008,
+   &#39;candidate_id&#39;: &#39;P80002926&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;N&#39;,
+   &#39;cycles&#39;: [2006, 2008, 2010, 2012, 2014, 2016],
+   &#39;district&#39;: &#39;00&#39;,
+   &#39;district_number&#39;: 0,
+   &#39;election_districts&#39;: [&#39;00&#39;],
+   &#39;election_years&#39;: [2008],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2005-10-12&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;O&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Open seat&#39;,
+   &#39;last_f2_date&#39;: &#39;2007-03-13&#39;,
+   &#39;last_file_date&#39;: &#39;2007-03-13&#39;,
+   &#39;load_date&#39;: &#39;2016-11-17T06:10:48&#39;,
+   &#39;name&#39;: &#39;AARON, LAURA DAVIS&#39;,
+   &#39;office&#39;: &#39;P&#39;,
+   &#39;office_full&#39;: &#39;President&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;US&#39;},
+  {&#39;active_through&#39;: 2024,
+   &#39;candidate_id&#39;: &#39;H4OR05312&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [2024],
+   &#39;district&#39;: &#39;05&#39;,
+   &#39;district_number&#39;: 5,
+   &#39;election_districts&#39;: [&#39;05&#39;],
+   &#39;election_years&#39;: [2024],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2023-07-24&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2023-07-24&#39;,
+   &#39;last_file_date&#39;: &#39;2023-07-24&#39;,
+   &#39;load_date&#39;: &#39;2023-10-16T21:03:02&#39;,
+   &#39;name&#39;: &#39;AASEN, ANDREW J&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;NON&#39;,
+   &#39;party_full&#39;: &#39;NON-PARTY&#39;,
+   &#39;state&#39;: &#39;OR&#39;},
+  {&#39;active_through&#39;: 2024,
+   &#39;candidate_id&#39;: &#39;H2CA30291&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;N&#39;,
+   &#39;cycles&#39;: [2022, 2024],
+   &#39;district&#39;: &#39;32&#39;,
+   &#39;district_number&#39;: 32,
+   &#39;election_districts&#39;: [&#39;32&#39;, &#39;32&#39;],
+   &#39;election_years&#39;: [2022, 2024],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2021-01-16&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2022-07-15&#39;,
+   &#39;last_file_date&#39;: &#39;2022-07-15&#39;,
+   &#39;load_date&#39;: &#39;2023-01-12T22:24:01&#39;,
+   &#39;name&#39;: &#39;AAZAMI, SHERVIN&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;CA&#39;},
+  {&#39;active_through&#39;: 2022,
+   &#39;candidate_id&#39;: &#39;H2MN07162&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [2022, 2024],
+   &#39;district&#39;: &#39;07&#39;,
+   &#39;district_number&#39;: 7,
+   &#39;election_districts&#39;: [&#39;07&#39;],
+   &#39;election_years&#39;: [2022],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2022-06-06&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2022-06-06&#39;,
+   &#39;last_file_date&#39;: &#39;2022-06-06&#39;,
+   &#39;load_date&#39;: &#39;2023-03-09T10:16:03&#39;,
+   &#39;name&#39;: &#39;ABAHSAIN, JILL&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DFL&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC-FARMER-LABOR&#39;,
+   &#39;state&#39;: &#39;MN&#39;},
+  {&#39;active_through&#39;: 2000,
+   &#39;candidate_id&#39;: &#39;H0MA01024&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [2000, 2002, 2004],
+   &#39;district&#39;: &#39;01&#39;,
+   &#39;district_number&#39;: 1,
+   &#39;election_districts&#39;: [&#39;01&#39;],
+   &#39;election_years&#39;: [2000],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2000-02-02&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2000-02-02&#39;,
+   &#39;last_file_date&#39;: &#39;2000-02-02&#39;,
+   &#39;load_date&#39;: &#39;2002-04-12T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABAIR, PETER JON&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;MA&#39;},
+  {&#39;active_through&#39;: 2008,
+   &#39;candidate_id&#39;: &#39;H6NJ05155&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [2006, 2008],
+   &#39;district&#39;: &#39;05&#39;,
+   &#39;district_number&#39;: 5,
+   &#39;election_districts&#39;: [&#39;05&#39;, &#39;05&#39;],
+   &#39;election_years&#39;: [2006, 2008],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2006-03-28&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2007-06-05&#39;,
+   &#39;last_file_date&#39;: &#39;2007-06-05&#39;,
+   &#39;load_date&#39;: &#39;2009-04-29T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABATE, CAMILLE M&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;NJ&#39;},
+  {&#39;active_through&#39;: 1992,
+   &#39;candidate_id&#39;: &#39;H2NJ12036&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [1992, 1994, 1996, 1998],
+   &#39;district&#39;: &#39;12&#39;,
+   &#39;district_number&#39;: 12,
+   &#39;election_districts&#39;: [&#39;12&#39;],
+   &#39;election_years&#39;: [1992],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;1992-04-15&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;1992-04-15&#39;,
+   &#39;last_file_date&#39;: &#39;1992-04-15&#39;,
+   &#39;load_date&#39;: &#39;2002-04-03T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABATE, FRANK G&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;NJ&#39;},
+  {&#39;active_through&#39;: 1990,
+   &#39;candidate_id&#39;: &#39;H0IA03071&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [1990],
+   &#39;district&#39;: &#39;03&#39;,
+   &#39;district_number&#39;: 3,
+   &#39;election_districts&#39;: [&#39;03&#39;],
+   &#39;election_years&#39;: [1990],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;1990-05-01&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;1990-05-01&#39;,
+   &#39;last_file_date&#39;: &#39;1990-05-01&#39;,
+   &#39;load_date&#39;: &#39;2002-03-30T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABBAS, JEFFREY LYN&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;IA&#39;},
+  {&#39;active_through&#39;: 2024,
+   &#39;candidate_id&#39;: &#39;H4CA32152&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;N&#39;,
+   &#39;cycles&#39;: [2024],
+   &#39;district&#39;: &#39;32&#39;,
+   &#39;district_number&#39;: 32,
+   &#39;election_districts&#39;: [&#39;32&#39;],
+   &#39;election_years&#39;: [2024],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;2023-12-03&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;2024-02-07&#39;,
+   &#39;last_file_date&#39;: &#39;2024-02-07&#39;,
+   &#39;load_date&#39;: &#39;2024-02-08T21:02:32&#39;,
+   &#39;name&#39;: &#39;ABBITT, DAVE&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;CA&#39;},
+  {&#39;active_through&#39;: 1994,
+   &#39;candidate_id&#39;: &#39;H4TX15043&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;C&#39;,
+   &#39;cycles&#39;: [1994],
+   &#39;district&#39;: &#39;15&#39;,
+   &#39;district_number&#39;: 15,
+   &#39;election_districts&#39;: [&#39;15&#39;],
+   &#39;election_years&#39;: [1994],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;1994-01-14&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;1994-01-14&#39;,
+   &#39;last_file_date&#39;: &#39;1994-01-14&#39;,
+   &#39;load_date&#39;: &#39;2002-03-30T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABBOTT, BONNIE&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;REP&#39;,
+   &#39;party_full&#39;: &#39;REPUBLICAN PARTY&#39;,
+   &#39;state&#39;: &#39;TX&#39;},
+  {&#39;active_through&#39;: 1996,
+   &#39;candidate_id&#39;: &#39;H6SD00077&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [1996, 1998],
+   &#39;district&#39;: &#39;01&#39;,
+   &#39;district_number&#39;: 1,
+   &#39;election_districts&#39;: [&#39;00&#39;],
+   &#39;election_years&#39;: [1996],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;1995-10-02&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;1995-10-02&#39;,
+   &#39;last_file_date&#39;: &#39;1995-10-02&#39;,
+   &#39;load_date&#39;: &#39;2002-04-03T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABBOTT, JAMES W&#39;,
+   &#39;office&#39;: &#39;H&#39;,
+   &#39;office_full&#39;: &#39;House&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;SD&#39;},
+  {&#39;active_through&#39;: 1992,
+   &#39;candidate_id&#39;: &#39;P80002579&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;P&#39;,
+   &#39;cycles&#39;: [1988, 1990, 1992, 1994, 1996, 1998],
+   &#39;district&#39;: &#39;00&#39;,
+   &#39;district_number&#39;: 0,
+   &#39;election_districts&#39;: [&#39;00&#39;, &#39;00&#39;],
+   &#39;election_years&#39;: [1988, 1992],
+   &#39;federal_funds_flag&#39;: True,
+   &#39;first_file_date&#39;: &#39;1988-08-29&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;1992-06-16&#39;,
+   &#39;last_file_date&#39;: &#39;1992-06-16&#39;,
+   &#39;load_date&#39;: &#39;2002-04-03T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABBOTT, JOHN HANCOCK&#39;,
+   &#39;office&#39;: &#39;P&#39;,
+   &#39;office_full&#39;: &#39;President&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;US&#39;},
+  {&#39;active_through&#39;: 1988,
+   &#39;candidate_id&#39;: &#39;S6CA00345&#39;,
+   &#39;candidate_inactive&#39;: False,
+   &#39;candidate_status&#39;: &#39;N&#39;,
+   &#39;cycles&#39;: [1986, 1988],
+   &#39;district&#39;: &#39;00&#39;,
+   &#39;district_number&#39;: 0,
+   &#39;election_districts&#39;: [&#39;00&#39;, &#39;00&#39;],
+   &#39;election_years&#39;: [1986, 1988],
+   &#39;federal_funds_flag&#39;: False,
+   &#39;first_file_date&#39;: &#39;1988-05-16&#39;,
+   &#39;has_raised_funds&#39;: True,
+   &#39;inactive_election_years&#39;: None,
+   &#39;incumbent_challenge&#39;: &#39;C&#39;,
+   &#39;incumbent_challenge_full&#39;: &#39;Challenger&#39;,
+   &#39;last_f2_date&#39;: &#39;1988-08-29&#39;,
+   &#39;last_file_date&#39;: &#39;1988-08-29&#39;,
+   &#39;load_date&#39;: &#39;2005-05-26T00:00:00&#39;,
+   &#39;name&#39;: &#39;ABBOTT, JOHN HANCOCK&#39;,
+   &#39;office&#39;: &#39;S&#39;,
+   &#39;office_full&#39;: &#39;Senate&#39;,
+   &#39;party&#39;: &#39;DEM&#39;,
+   &#39;party_full&#39;: &#39;DEMOCRATIC PARTY&#39;,
+   &#39;state&#39;: &#39;CA&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Turn those results into a DataFrame.</p>
+<div class="cell tag_solution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;results&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    active_through candidate_id  candidate_inactive candidate_status  \
+0             2022    H2CO07170               False                P   
+1             2022    H2UT03280               False                C   
+2             2018    S2UT00229               False                P   
+3             2020    H0TX22260               False                C   
+4             1978    H6PA16106               False                P   
+5             2012    H2CA01110               False                P   
+6             2018    H8CO06237               False                C   
+7             2008    P80002926               False                N   
+8             2024    H4OR05312               False                C   
+9             2024    H2CA30291               False                N   
+10            2022    H2MN07162               False                P   
+11            2000    H0MA01024               False                P   
+12            2008    H6NJ05155               False                C   
+13            1992    H2NJ12036               False                P   
+14            1990    H0IA03071               False                C   
+15            2024    H4CA32152               False                N   
+16            1994    H4TX15043               False                C   
+17            1996    H6SD00077               False                P   
+18            1992    P80002579               False                P   
+19            1988    S6CA00345               False                N   
+
+                                  cycles district  district_number  \
+0                           [2022, 2024]       07                7   
+1                                 [2022]       03                3   
+2         [2012, 2014, 2016, 2018, 2020]       00                0   
+3                                 [2020]       22               22   
+4                     [1976, 1978, 1980]       16               16   
+5                     [2012, 2014, 2016]       01                1   
+6                                 [2018]       06                6   
+7   [2006, 2008, 2010, 2012, 2014, 2016]       00                0   
+8                                 [2024]       05                5   
+9                           [2022, 2024]       32               32   
+10                          [2022, 2024]       07                7   
+11                    [2000, 2002, 2004]       01                1   
+12                          [2006, 2008]       05                5   
+13              [1992, 1994, 1996, 1998]       12               12   
+14                                [1990]       03                3   
+15                                [2024]       32               32   
+16                                [1994]       15               15   
+17                          [1996, 1998]       01                1   
+18  [1988, 1990, 1992, 1994, 1996, 1998]       00                0   
+19                          [1986, 1988]       00                0   
+
+   election_districts election_years  federal_funds_flag  ...  \
+0                [07]         [2022]               False  ...   
+1                [03]         [2022]               False  ...   
+2            [00, 00]   [2012, 2018]               False  ...   
+3                [22]         [2020]               False  ...   
+4            [16, 16]   [1976, 1978]               False  ...   
+5                [01]         [2012]               False  ...   
+6                [06]         [2018]               False  ...   
+7                [00]         [2008]               False  ...   
+8                [05]         [2024]               False  ...   
+9            [32, 32]   [2022, 2024]               False  ...   
+10               [07]         [2022]               False  ...   
+11               [01]         [2000]               False  ...   
+12           [05, 05]   [2006, 2008]               False  ...   
+13               [12]         [1992]               False  ...   
+14               [03]         [1990]               False  ...   
+15               [32]         [2024]               False  ...   
+16               [15]         [1994]               False  ...   
+17               [00]         [1996]               False  ...   
+18           [00, 00]   [1988, 1992]                True  ...   
+19           [00, 00]   [1986, 1988]               False  ...   
+
+   incumbent_challenge_full  last_f2_date last_file_date            load_date  \
+0                 Open seat    2022-08-10     2022-08-10  2023-03-09T10:16:03   
+1                Challenger    2022-03-21     2022-03-21  2022-04-13T21:10:09   
+2                 Open seat    2018-04-23     2018-04-23  2019-03-27T16:02:41   
+3                 Open seat    2019-10-17     2019-10-17  2020-03-18T21:13:37   
+4                      None    1978-07-05     1978-07-05  2002-03-30T00:00:00   
+5                Challenger    2012-02-22     2012-02-22  2013-04-26T09:04:30   
+6                Challenger    2017-04-26     2017-04-26  2017-08-01T20:57:28   
+7                 Open seat    2007-03-13     2007-03-13  2016-11-17T06:10:48   
+8                Challenger    2023-07-24     2023-07-24  2023-10-16T21:03:02   
+9                Challenger    2022-07-15     2022-07-15  2023-01-12T22:24:01   
+10               Challenger    2022-06-06     2022-06-06  2023-03-09T10:16:03   
+11               Challenger    2000-02-02     2000-02-02  2002-04-12T00:00:00   
+12               Challenger    2007-06-05     2007-06-05  2009-04-29T00:00:00   
+13               Challenger    1992-04-15     1992-04-15  2002-04-03T00:00:00   
+14               Challenger    1990-05-01     1990-05-01  2002-03-30T00:00:00   
+15               Challenger    2024-02-07     2024-02-07  2024-02-08T21:02:32   
+16               Challenger    1994-01-14     1994-01-14  2002-03-30T00:00:00   
+17               Challenger    1995-10-02     1995-10-02  2002-04-03T00:00:00   
+18               Challenger    1992-06-16     1992-06-16  2002-04-03T00:00:00   
+19               Challenger    1988-08-29     1988-08-29  2005-05-26T00:00:00   
+
+                     name office office_full party               party_full  \
+0           AADLAND, ERIK      H       House   REP         REPUBLICAN PARTY   
+1            AALDERS, TIM      H       House   REP         REPUBLICAN PARTY   
+2   AALDERS, TIMOTHY NOEL      S      Senate   CON       CONSTITUTION PARTY   
+3   AALOORI, BANGAR REDDY      H       House   REP         REPUBLICAN PARTY   
+4       AAMODT, NORMAN O.      H       House   REP         REPUBLICAN PARTY   
+5        AANESTAD, SAMUEL      H       House   REP         REPUBLICAN PARTY   
+6         AARESTAD, DAVID      H       House   DEM         DEMOCRATIC PARTY   
+7      AARON, LAURA DAVIS      P   President   DEM         DEMOCRATIC PARTY   
+8         AASEN, ANDREW J      H       House   NON                NON-PARTY   
+9         AAZAMI, SHERVIN      H       House   DEM         DEMOCRATIC PARTY   
+10         ABAHSAIN, JILL      H       House   DFL  DEMOCRATIC-FARMER-LABOR   
+11       ABAIR, PETER JON      H       House   REP         REPUBLICAN PARTY   
+12       ABATE, CAMILLE M      H       House   DEM         DEMOCRATIC PARTY   
+13         ABATE, FRANK G      H       House   DEM         DEMOCRATIC PARTY   
+14     ABBAS, JEFFREY LYN      H       House   REP         REPUBLICAN PARTY   
+15           ABBITT, DAVE      H       House   DEM         DEMOCRATIC PARTY   
+16         ABBOTT, BONNIE      H       House   REP         REPUBLICAN PARTY   
+17        ABBOTT, JAMES W      H       House   DEM         DEMOCRATIC PARTY   
+18   ABBOTT, JOHN HANCOCK      P   President   DEM         DEMOCRATIC PARTY   
+19   ABBOTT, JOHN HANCOCK      S      Senate   DEM         DEMOCRATIC PARTY   
+
+   state  
+0     CO  
+1     UT  
+2     UT  
+3     TX  
+4     PA  
+5     CA  
+6     CO  
+7     US  
+8     OR  
+9     CA  
+10    MN  
+11    MA  
+12    NJ  
+13    NJ  
+14    IA  
+15    CA  
+16    TX  
+17    SD  
+18    US  
+19    CA  
+
+[20 rows x 24 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="pagination">
+<h2>Pagination<a class="headerlink" href="#pagination" title="Permalink to this heading">#</a></h2>
+<p>Get <em>all</em> <a class="reference external" href="https://data.cityofnewyork.us/City-Government/Film-Permits/tg4x-b46p/about_data">NYC film permits</a> through <a class="reference external" href="https://dev.socrata.com/foundry/data.cityofnewyork.us/tg4x-b46p">the API</a>. <a class="reference external" href="https://dev.socrata.com/docs/paging">Documentation on paging.</a></p>
+<p><strong>Hints</strong></p>
+<p>You’ll probably want to create DataFrames for each page, then “concatenate” them. Here’s a structure you can start with:</p>
+<div class="cell tag_solution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://data.cityofnewyork.us/resource/tg4x-b46p.json&quot;</span>
+
+<span class="n">all_data</span> <span class="o">=</span> <span class="p">[]</span>  
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;$limit&quot;</span><span class="p">:</span> <span class="n">limit</span><span class="p">,</span>
+        <span class="s2">&quot;$offset&quot;</span><span class="p">:</span> <span class="n">offset</span>
+    <span class="p">}</span>
+    
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">:</span>
+        <span class="n">all_data</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  
+        <span class="k">break</span>
+    
+    <span class="n">all_data</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="n">offset</span> <span class="o">+=</span> <span class="n">limit</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  eventid        eventtype            startdatetime              enddatetime  \
+0  807084  Shooting Permit  2024-08-25T01:00:00.000  2024-08-25T13:00:00.000   
+1  806932  Shooting Permit  2024-08-26T07:00:00.000  2024-08-26T21:00:00.000   
+2  806927  Shooting Permit  2024-08-26T06:00:00.000  2024-08-26T15:00:00.000   
+3  806915  Shooting Permit  2024-08-26T07:00:00.000  2024-08-26T22:00:00.000   
+4  806888  Shooting Permit  2024-08-25T06:00:00.000  2024-08-25T20:00:00.000   
+
+                 enteredon                              eventagency  \
+0  2024-08-23T03:29:50.000  Mayor&#39;s Office of Media &amp; Entertainment   
+1  2024-08-22T12:45:25.000  Mayor&#39;s Office of Media &amp; Entertainment   
+2  2024-08-22T12:25:33.000  Mayor&#39;s Office of Media &amp; Entertainment   
+3  2024-08-22T11:41:51.000  Mayor&#39;s Office of Media &amp; Entertainment   
+4  2024-08-22T08:45:33.000  Mayor&#39;s Office of Media &amp; Entertainment   
+
+                                         parkingheld    borough  \
+0     WEST   48 STREET between 6 AVENUE and 7 AVENUE  Manhattan   
+1  KINGSLAND AVENUE between GREENPOINT AVENUE and...   Brooklyn   
+2  WEST 14 ST between 10TH AVE and WASHINGTON ST,...  Manhattan   
+3  EAST   74 STREET between LEXINGTON AVENUE and ...  Manhattan   
+4  NASSAU STREET between GOLD STREET and DUFFIELD...   Brooklyn   
+
+  communityboard_s   policeprecinct_s    category  subcategoryname  \
+0                5                 18  Television             News   
+1                1                 94  Television   Cable-episodic   
+2             2, 4              10, 6  Commercial       Commercial   
+3                8                 19  Television   Cable-episodic   
+4          1, 2, 3  108, 5, 7, 84, 94  Television  Episodic series   
+
+                    country                   zipcode_s  
+0  United States of America                10036, 10105  
+1  United States of America                       11222  
+2  United States of America                10011, 10014  
+3  United States of America                10021, 10075  
+4  United States of America  10002, 11101, 11201, 11222  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/signup">Sign up.</a></p>
+<ul class="simple">
+<li><p>If you have an account already, <a class="reference external" href="https://github.com/login">sign in</a>.</p></li>
+<li><p>A <a class="reference external" href="https://github.com/pricing">Free plan</a> is sufficient.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/editor/workspaces#_how-do-i-open-a-vs-code-workspace">Open</a> the folder/repository from <a class="reference external" href="https://computing-in-context.afeld.me/lecture_23.html">Lecture 23</a> in VSCode.</p></li>
+<li><p>In bottom left, the <a class="reference external" href="https://code.visualstudio.com/docs/sourcecontrol/overview#_git-status-bar-actions">Publish</a> icon (<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAIABJREFUeF7t3Q2W5LaOpuHslbl7ZZ5Z2VyvrMeyK+yoqMwM6ofiB/KJc+5x3SqKBF4AxCdKGflfHz4IIIAAAgggsByB/1rOYw4jgAACCCCAwAcBIAkQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQAABBBBYkAABsGDQuYwAAggggAABIAcQQOCVwH9/guT573778e9/NKD7z9OY5z83XGoIAgj0JEAA9KRrbgRyCTw39O3Pj6b+WfO/2ouHEHgIiO3/EwdXUzYfAm8IEABSBIH5CTya+u8/XL2jyR+lugkBwuAoPdchsIMAAbADlqEIFCGwNfjHXX1ys2/F+RAFTgpaiRmHQAMBAqABkiEIhBPYmnyFu/urMBIEV5E0z9IECIClw8/5wgRWa/rfher//vjH/1M4nkxH4HYCBMDtyC2IwGECj6Y/w7H+YQhvLtzEgEcFveiadyoCBMBU4eTMhAQ0/eNBJQaOs3PlAgQIgAWCzMWSBDT+68LmEcF1LM00EQECYKJgcqU8AU2/fwg3MeBdgf6crVCAAAFQIEhMnJ6Axn9/iAmB+5lbMYwAARAWEOYsRUDjHx9ujwfGx4AFgwgQAIPAW3ZpAhp/XvidCOTFhEWdCRAAnQGbHoEnAhp/fjoQAvkxYuFFBAiAi0CaBoFvCGj89dKDEKgXMxbvJEAA7ARmOAI7CWxvnD++pnfnpYYHECAEAoLAhD4ECIA+XM2KgLv+uXKAEJgrnrz5+PggAKQBAtcS0Piv5Zk0GxGQFA22nCZAAJxGaAIE/iHguH+NZCAE1ojz9F4SANOHmIM3EHDXfwPksCWIgLCAMGc/AQJgPzNXIPBMwF3/2vlACKwd/9LeEwClw8f4wQT+35+/etav5h0chIDliYCAIDBh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" alt="cloud with up arrow" style="height: 1.5rem; vertical-align: middle;"/>). <!-- https://icon-sets.iconify.design/codicon/cloud-upload/ --></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/sourcecontrol/github#_authenticating-with-an-existing-repository">Allow signing in with GitHub</a>, if prompted.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">to</span> <span class="pre">GitHub</span> <span class="pre">public</span> <span class="pre">repository</span></code>.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility">Public vs. private</a></p></li>
+</ol>
+</li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/sourcecontrol/overview#_remotes">Push (a.k.a. “sync”)</a> your repository.</p></li>
+<li><p>Visit the repository on GitHub.</p>
+<ol class="arabic simple">
+<li><p>Click into the files.</p></li>
+</ol>
+</li>
+<li><p>Make a change in the repository in VSCode (locally).</p></li>
+<li><p>Commit the change.</p></li>
+<li><p>Push the change to GitHub.</p></li>
+</ol>
+</section>
+<section id="jupyterbook">
+<h2><a class="reference external" href="https://jupyterbook.org/">JupyterBook</a><a class="headerlink" href="#jupyterbook" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Used to build the <a class="reference external" href="https://computing-in-context.afeld.me/">course site</a></p></li>
+<li><p><a class="reference external" href="https://computing-in-context.afeld.me/notebooks.html#installing-packages">Install <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> via Anaconda</a></p></li>
+</ul>
+<section id="config">
+<h3><a class="reference external" href="https://jupyterbook.org/en/stable/customize/config.html">Config</a><a class="headerlink" href="#config" title="Permalink to this heading">#</a></h3>
+<p>Create minimal <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NAME</span>
+<span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NAME</span>
+
+<span class="nt">execute</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">execute_notebooks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">off</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started">More about YAML.</a></p>
+</section>
+<section id="table-of-contents">
+<h3><a class="reference external" href="https://jupyterbook.org/customize/toc.html">Table of contents</a><a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h3>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project_3.ipynb</span>
+</pre></div>
+</div>
+</section>
+<section id="build-the-site">
+<h3><a class="reference external" href="https://jupyterbook.org/en/stable/start/build.html#build-your-books-html">Build the site</a><a class="headerlink" href="#build-the-site" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://code.visualstudio.com/docs/terminal/getting-started">Open a terminal</a> and run:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="view-the-site-locally">
+<h3>View the site (locally)<a class="headerlink" href="#view-the-site-locally" title="Permalink to this heading">#</a></h3>
+<p>On Mac:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>_build/html/index.html
+</pre></div>
+</div>
+<p>On Windows:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;_build\html\index.html&quot;</span>
+</pre></div>
+</div>
+<p>Alternatively,</p>
+<ul class="simple">
+<li><p>Find the file through Finder / Windows Explorer and double-click</p></li>
+<li><p>From your browser, go to <code class="docutils literal notranslate"><span class="pre">File</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">File…</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="commit-changes">
+<h2>Commit changes<a class="headerlink" href="#commit-changes" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/sourcecontrol/overview#_viewing-diffs">View the diff</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files#configuring-ignored-files-for-a-single-repository">Ignore</a> <code class="docutils literal notranslate"><span class="pre">_build/</span></code> files</p></li>
+<li><p>Commit</p></li>
+<li><p>Push</p></li>
+</ol>
+<hr class="docutils" />
+<p>Submit via Gradescope.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scraping">Scraping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fec-data">FEC data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#querying">Querying</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pagination">Pagination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterbook">JupyterBook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#config">Config</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-site">Build the site</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-site-locally">View the site (locally)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-changes">Commit changes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arial Chen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

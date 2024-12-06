@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/asyncio/base_events.py", line 685, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/lib/python3.12/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def calculate_mean(values):
+    total = sum(values)
+    count = len(values)
+    return total / count
+
+def calculate_median(values):
+    sorted_values = sorted(values)
+    n = len(sorted_values)
+    middle = n // 2
+    if n % 2 == 0: 
+        return (sorted_values[middle - 1] + sorted_values[middle]) / 2
+    else:  
+        return sorted_values[middle]
+
+def calculate_mode(values):
+    frequency = {}
+    for value in values:
+        if value in frequency:
+            frequency[value] += 1
+        else:
+            frequency[value] = 1
+    max_count = max(frequency.values())
+    modes = [key for key, count in frequency.items() if count == max_count]
+    return modes  
+
+if data: 
+    mean = calculate_mean(data)
+    median = calculate_median(data)
+    mode = calculate_mode(data)
+
+    print(f"Mean Electric Range: {mean:.2f} miles")
+    print(f"Median Electric Range: {median:.2f} miles")
+    print(f"Mode Electric Range: {', '.join(map(str, mode))}")
+else:
+    print("No valid Electric Range data found.")
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[8], line 26[0m
+[1;32m     23[0m     modes [38;5;241m=[39m [key [38;5;28;01mfor[39;00m key, count [38;5;129;01min[39;00m frequency[38;5;241m.[39mitems() [38;5;28;01mif[39;00m count [38;5;241m==[39m max_count]
+[1;32m     24[0m     [38;5;28;01mreturn[39;00m modes  
+[0;32m---> 26[0m [38;5;28;01mif[39;00m data: 
+[1;32m     27[0m     mean [38;5;241m=[39m calculate_mean(data)
+[1;32m     28[0m     median [38;5;241m=[39m calculate_median(data)
+
+[0;31mNameError[0m: name 'data' is not defined
+
