@@ -6,7 +6,7 @@ build:
     python: "3.11"
   jobs:
     pre_build:
-      - "jupyter-book config sphinx /path/to/mybook_o/"
+      - jupyter-book config sphinx .
 
 python:
   install:
@@ -14,7 +14,6 @@ python:
       path: .
       extra_requirements:
         - sphinx
-        - jupyter-book
 
 sphinx:
   builder: html

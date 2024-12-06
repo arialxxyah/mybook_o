@@ -1,4 +1,4 @@
-# Welcome to My Jupyter Book
+# Welcome to My Jupyter Books
 
 This book contains my Project 1 and 2 and is a part of my final project!
 
