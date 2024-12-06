@@ -8,6 +8,7 @@ execute:
 
 sphinx:
   config:
+    html_baseurl: "https://<your-readthedocs-project>.readthedocs.io"
     # https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html#implicit-targets
     myst_heading_anchors: 4
     # https://jupyterbook.org/en/stable/interactive/interactive.html#plotly
