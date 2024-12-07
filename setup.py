@@ -7,5 +7,6 @@ setup(
         "sphinx",
         "sphinx-book-theme",
         "jupyter-sphinx",
+        "sphinx_togglebutton",
     ],
 )
