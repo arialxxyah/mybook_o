@@ -1,4 +1,5 @@
 sphinx
 jupyter-book
 sphinx_togglebutton
+sphinx_copybutton
 
