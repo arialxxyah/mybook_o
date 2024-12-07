@@ -8,5 +8,6 @@ setup(
         "sphinx-book-theme",
         "jupyter-sphinx",
         "sphinx_togglebutton",
+        "sphinx_copybutton",
     ],
 )
