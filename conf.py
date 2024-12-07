@@ -1,12 +1,9 @@
 import os
 
-# Dynamically set the output directory for Read the Docs
 if os.environ.get('READTHEDOCS') == 'True':
     html_output_path = os.path.join(os.environ.get('READTHEDOCS_OUTPUT'), 'html')
 else:
     html_output_path = "_build/html"
-
-html_static_path = [html_output]
 
 author = 'Arial'
 comments_config = {'hypothesis': False, 'utterances': False}
