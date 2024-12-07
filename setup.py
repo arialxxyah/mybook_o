@@ -9,5 +9,6 @@ setup(
         "jupyter-sphinx",
         "sphinx_togglebutton",
         "sphinx_copybutton",
+        "myst_nb",
     ],
 )
