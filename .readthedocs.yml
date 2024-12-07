@@ -1,9 +1,9 @@
 version: 2
 
 sphinx:
-  configuration: conf.py 
-
+  configuration: conf.py  
 build:
+  output: $READTHEDOCS_OUTPUT/html
   os: ubuntu-22.04
   tools:
     python: "3.11"

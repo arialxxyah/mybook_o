@@ -6,6 +6,8 @@ if os.environ.get('READTHEDOCS') == 'True':
 else:
     html_output_path = "_build/html"
 
+html_static_path = [html_output]
+
 author = 'Arial'
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2023'
