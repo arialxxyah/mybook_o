@@ -1,0 +1,1094 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project 2 &#8212; Computing in Context - Arial</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Project_2';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Project 1" href="Project_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computing in Context - Arial</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to My Jupyter Books
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Project_1.html">Project 1</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 2</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Project_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-datasets-from-the-u-s-department-of-education-and-labor-market-statistics-i-will-analyze-the-trends-in-computer-science-graduates-from-1970-to-2023-and-compare-them-with-the-growth-in-the-number-of-jobs-in-the-technology-sector-this-analysis-will-explore-the-relationship-between-the-supply-of-graduates-and-the-demand-for-tech-professionals-over-time">Using datasets from the U.S. Department of Education and labor market statistics, I will analyze the trends in computer science graduates from 1970 to 2023 and compare them with the growth in the number of jobs in the technology sector. This analysis will explore the relationship between the supply of graduates and the demand for tech professionals over time.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#firstly-i-import-the-first-dataset-with-bachelor-s-degrees-conferred-by-postsecondary-institutions-by-field-of-study-academic-years-1970-71-through-2021-22">Firstly, I import the first dataset with  Bachelor’s degrees conferred by postsecondary institutions, by field of study; Academic years, 1970-71 through 2021-22</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-section-i-also-import-a-dataset-that-contains-data-on-bachelor-s-degrees-conferred-by-postsecondary-institutions-across-various-fields-of-study-spanning-academic-years-from-197071-to-202122-using-the-pandas-library-in-python-i-load-the-dataset-and-filter-it-to-only-include-rows-corresponding-to-computer-science-graduates">In this section, I also import a dataset that contains data on Bachelor’s degrees conferred by postsecondary institutions across various fields of study, spanning academic years from 1970–71 to 2021–22. Using the pandas library in Python, I load the dataset and filter it to only include rows corresponding to computer science graduates.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#after-loading-the-dataset-and-previewing-its-structure-using-head-i-proceed-to-handle-the-column-headers-representing-years">After loading the dataset and previewing its structure using head(), I proceed to handle the column headers representing years.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#to-prepare-the-data-for-analysis-i-first-isolate-the-columns-corresponding-to-the-years-omitting-the-first-column-that-contains-field-names-by-converting-the-years-into-a-list-format-i-ensure-consistency-and-compatibility-for-plotting-and-further-data-manipulation-additionally-i-extract-the-row-of-data-corresponding-to-computer-science-graduates-excluding-the-field-name-column-to-create-a-clean-subset-for-visualization-and-trend-analysis-finally-i-print-the-results-to-verify-that-the-data-has-been-properly-prepared-for-the-next-steps">To prepare the data for analysis, I first isolate the columns corresponding to the years, omitting the first column that contains field names. By converting the years into a list format, I ensure consistency and compatibility for plotting and further data manipulation. Additionally, I extract the row of data corresponding to computer science graduates (excluding the field name column) to create a clean subset for visualization and trend analysis. Finally, I print the results to verify that the data has been properly prepared for the next steps.”</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#to-visualize-the-trends-in-the-number-of-computer-science-graduates-over-time-i-created-a-line-plot-using-matplotlib-i-used-the-years-as-the-x-axis-and-the-corresponding-number-of-graduates-as-the-y-axis-the-graph-is-styled-with-markers-to-highlight-each-data-point-and-a-cyan-color-scheme-is-used-to-distinguish-the-line">To visualize the trends in the number of computer science graduates over time, I created a line plot using Matplotlib. I used the years as the x-axis and the corresponding number of graduates as the y-axis. The graph is styled with markers to highlight each data point, and a cyan color scheme is used to distinguish the line.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#here-i-filtered-the-dataset-to-include-only-the-years-20172022-for-two-key-reasons">Here, I filtered the dataset to include only the years 2017–2022 for two key reasons.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-targeted-approach-enables-me-to-explore-my-hypothesis-more-effectively-by-concentrating-on-the-most-relevant-and-recent-trends-in-the-data-the-filtered-data-is-visualized-in-a-line-graph-to-clearly-illustrate-these-dynamics">This targeted approach enables me to explore my hypothesis more effectively by concentrating on the most relevant and recent trends in the data. The filtered data is visualized in a line graph to clearly illustrate these dynamics.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#here-i-import-the-second-dataset-with-number-of-tech-jobs-from-2017-onwards-in-america">Here I import the second dataset with number of tech jobs from 2017 onwards in America</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#following-this-i-noticed-that-there-is-an-asterisk-in-row-4">Following this, I noticed that there is an asterisk in row 4.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-step-i-use-pd-to-numeric-to-convert-the-jobs-column-into-a-numeric-data-type-this-is-particularly-useful-for-cleaning-the-data-and-ensuring-that-all-entries-in-this-column-are-properly-formatted-as-numbers-by-setting-errors-coerce-i-handle-any-non-numeric-values-by-replacing-them-with-nan-not-a-number-which-prevents-errors-during-calculations-or-analysis">In this step, I use pd.to_numeric() to convert the ‘Jobs’ column into a numeric data type. This is particularly useful for cleaning the data and ensuring that all entries in this column are properly formatted as numbers. By setting errors=’coerce’, I handle any non-numeric values by replacing them with NaN (Not a Number), which prevents errors during calculations or analysis.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-next-step-i-plot-a-line-graph-to-visualize-the-trends-in-tech-sector-employment-in-the-u-s-from-2017-to-2023-using-matplotlib-i-map-the-years-year-column-on-the-x-axis-and-the-corresponding-number-of-tech-jobs-jobs-column-on-the-y-axis">In the next step, I plot a line graph to visualize the trends in tech sector employment in the U.S. from 2017 to 2023. Using Matplotlib, I map the years (‘Year’ column) on the x-axis and the corresponding number of tech jobs (‘Jobs’ column) on the y-axis.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-step-i-combine-the-two-plotstech-sector-employment-and-computer-science-graduation-ratesinto-a-single-visualization-to-examine-their-correlation-my-hypothesis-is-that-recent-trends-might-reveal-either-a-decrease-in-tech-job-availability-or-a-disproportionately-high-increase-in-graduation-rates-suggesting-potential-oversaturation-in-the-job-market">In this step, I combine the two plots—tech sector employment and computer science graduation rates—into a single visualization to examine their correlation. My hypothesis is that recent trends might reveal either a decrease in tech job availability or a disproportionately high increase in graduation rates, suggesting potential oversaturation in the job market.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#however-i-am-surprised-that-this-is-not-immediately-apparent-in-the-combined-graphs-this-raises-the-question-of-whether-the-way-i-am-displaying-the-data-might-be-obscuring-the-relationship">However, I am surprised that this is not immediately apparent in the combined graphs. This raises the question of whether the way I am displaying the data might be obscuring the relationship.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reflections-and-next-steps">Reflections and Next Steps</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;vscode+jupyterlab+notebook_connected&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="project-2">
+<h1>Project 2<a class="headerlink" href="#project-2" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="using-datasets-from-the-u-s-department-of-education-and-labor-market-statistics-i-will-analyze-the-trends-in-computer-science-graduates-from-1970-to-2023-and-compare-them-with-the-growth-in-the-number-of-jobs-in-the-technology-sector-this-analysis-will-explore-the-relationship-between-the-supply-of-graduates-and-the-demand-for-tech-professionals-over-time">
+<h1>Using datasets from the U.S. Department of Education and labor market statistics, I will analyze the trends in computer science graduates from 1970 to 2023 and compare them with the growth in the number of jobs in the technology sector. This analysis will explore the relationship between the supply of graduates and the demand for tech professionals over time.<a class="headerlink" href="#using-datasets-from-the-u-s-department-of-education-and-labor-market-statistics-i-will-analyze-the-trends-in-computer-science-graduates-from-1970-to-2023-and-compare-them-with-the-growth-in-the-number-of-jobs-in-the-technology-sector-this-analysis-will-explore-the-relationship-between-the-supply-of-graduates-and-the-demand-for-tech-professionals-over-time" title="Permalink to this heading">#</a></h1>
+<p>Hypothesis: The rapid growth of the tech industry in recent decades has created a surge in demand for computer science graduates. However, fluctuations in the number of graduates may not align perfectly with actual job postings / increase.</p>
+</section>
+<section id="firstly-i-import-the-first-dataset-with-bachelor-s-degrees-conferred-by-postsecondary-institutions-by-field-of-study-academic-years-1970-71-through-2021-22">
+<h1>Firstly, I import the first dataset with  Bachelor’s degrees conferred by postsecondary institutions, by field of study; Academic years, 1970-71 through 2021-22<a class="headerlink" href="#firstly-i-import-the-first-dataset-with-bachelor-s-degrees-conferred-by-postsecondary-institutions-by-field-of-study-academic-years-1970-71-through-2021-22" title="Permalink to this heading">#</a></h1>
+<p>This dataset provides the foundation for understanding trends in computer science graduates over a long period. By analyzing these trends, we can assess how well the education system responds to changes in industry demand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="in-this-section-i-also-import-a-dataset-that-contains-data-on-bachelor-s-degrees-conferred-by-postsecondary-institutions-across-various-fields-of-study-spanning-academic-years-from-197071-to-202122-using-the-pandas-library-in-python-i-load-the-dataset-and-filter-it-to-only-include-rows-corresponding-to-computer-science-graduates">
+<h1>In this section, I also import a dataset that contains data on Bachelor’s degrees conferred by postsecondary institutions across various fields of study, spanning academic years from 1970–71 to 2021–22. Using the pandas library in Python, I load the dataset and filter it to only include rows corresponding to computer science graduates.<a class="headerlink" href="#in-this-section-i-also-import-a-dataset-that-contains-data-on-bachelor-s-degrees-conferred-by-postsecondary-institutions-across-various-fields-of-study-spanning-academic-years-from-197071-to-202122-using-the-pandas-library-in-python-i-load-the-dataset-and-filter-it-to-only-include-rows-corresponding-to-computer-science-graduates" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CS_Graduate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;tabn322.10.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">CS_Graduate</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Computer and information sciences and support \n   services</th>
+      <th>2388</th>
+      <th>5652</th>
+      <th>15121</th>
+      <th>42337</th>
+      <th>25159</th>
+      <th>24506</th>
+      <th>44142</th>
+      <th>47702</th>
+      <th>50961</th>
+      <th>55271</th>
+      <th>59586</th>
+      <th>64402</th>
+      <th>71416</th>
+      <th>79597</th>
+      <th>88638</th>
+      <th>97054</th>
+      <th>104883</th>
+      <th>108503</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Education</td>
+      <td>176307.0</td>
+      <td>154437.0</td>
+      <td>108074.0</td>
+      <td>87147.0</td>
+      <td>110807.0</td>
+      <td>105384.0</td>
+      <td>105458.0</td>
+      <td>107235.0</td>
+      <td>104698.0</td>
+      <td>98838.0</td>
+      <td>91596.0</td>
+      <td>87221.0</td>
+      <td>85130.0</td>
+      <td>82599.0</td>
+      <td>83952.0</td>
+      <td>85052.0</td>
+      <td>89477.0</td>
+      <td>89410.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Engineering</td>
+      <td>45034.0</td>
+      <td>38733.0</td>
+      <td>63642.0</td>
+      <td>77391.0</td>
+      <td>62448.0</td>
+      <td>62168.0</td>
+      <td>58209.0</td>
+      <td>66841.0</td>
+      <td>85987.0</td>
+      <td>92169.0</td>
+      <td>97852.0</td>
+      <td>106789.0</td>
+      <td>115671.0</td>
+      <td>121953.0</td>
+      <td>126692.0</td>
+      <td>128337.0</td>
+      <td>126042.0</td>
+      <td>123017.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Engineering technologies\3\</td>
+      <td>5148.0</td>
+      <td>7943.0</td>
+      <td>11713.0</td>
+      <td>19731.0</td>
+      <td>17303.0</td>
+      <td>15829.0</td>
+      <td>14660.0</td>
+      <td>14565.0</td>
+      <td>17010.0</td>
+      <td>16807.0</td>
+      <td>17253.0</td>
+      <td>17159.0</td>
+      <td>18119.0</td>
+      <td>18728.0</td>
+      <td>19620.0</td>
+      <td>19788.0</td>
+      <td>19004.0</td>
+      <td>18405.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>English language and literature/letters</td>
+      <td>63914.0</td>
+      <td>41452.0</td>
+      <td>31922.0</td>
+      <td>34083.0</td>
+      <td>51064.0</td>
+      <td>49928.0</td>
+      <td>50569.0</td>
+      <td>55094.0</td>
+      <td>52401.0</td>
+      <td>50464.0</td>
+      <td>45851.0</td>
+      <td>42797.0</td>
+      <td>41314.0</td>
+      <td>40002.0</td>
+      <td>39344.0</td>
+      <td>38049.0</td>
+      <td>35764.0</td>
+      <td>33429.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Family and consumer sciences/human sciences</td>
+      <td>11167.0</td>
+      <td>17409.0</td>
+      <td>18370.0</td>
+      <td>13847.0</td>
+      <td>13920.0</td>
+      <td>14353.0</td>
+      <td>16421.0</td>
+      <td>20775.0</td>
+      <td>23930.0</td>
+      <td>24689.0</td>
+      <td>24584.0</td>
+      <td>25389.0</td>
+      <td>25080.0</td>
+      <td>24357.0</td>
+      <td>23956.0</td>
+      <td>23248.0</td>
+      <td>22319.0</td>
+      <td>20630.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="after-loading-the-dataset-and-previewing-its-structure-using-head-i-proceed-to-handle-the-column-headers-representing-years">
+<h1>After loading the dataset and previewing its structure using head(), I proceed to handle the column headers representing years.<a class="headerlink" href="#after-loading-the-dataset-and-previewing-its-structure-using-head-i-proceed-to-handle-the-column-headers-representing-years" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Years</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;tabn322.10.xlsx&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Years</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Field of study</th>
+      <th>1970-71</th>
+      <th>1975-76</th>
+      <th>1980-81</th>
+      <th>1985-86</th>
+      <th>1990-91</th>
+      <th>1995-96</th>
+      <th>2000-01</th>
+      <th>2005-06</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18</th>
+      <th>2018-19</th>
+      <th>2019-20</th>
+      <th>2020-21</th>
+      <th>2021-22</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>12.0</td>
+      <td>13.0</td>
+      <td>14.0</td>
+      <td>15.0</td>
+      <td>16.0</td>
+      <td>17.0</td>
+      <td>18.0</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Total</td>
+      <td>839730.0</td>
+      <td>925746.0</td>
+      <td>935140.0</td>
+      <td>987823.0</td>
+      <td>1094538.0</td>
+      <td>1164792.0</td>
+      <td>1244171.0</td>
+      <td>1485104.0</td>
+      <td>1840381.0</td>
+      <td>1870150.0</td>
+      <td>1894969.0</td>
+      <td>1920750.0</td>
+      <td>1956114.0</td>
+      <td>1980665.0</td>
+      <td>2013086.0</td>
+      <td>2038682.0</td>
+      <td>2066463.0</td>
+      <td>2015035.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Agriculture and natural resources\1\</td>
+      <td>12674.0</td>
+      <td>19402.0</td>
+      <td>21886.0</td>
+      <td>17191.0</td>
+      <td>13363.0</td>
+      <td>21757.0</td>
+      <td>23766.0</td>
+      <td>23497.0</td>
+      <td>34304.0</td>
+      <td>35953.0</td>
+      <td>37028.0</td>
+      <td>37827.0</td>
+      <td>38782.0</td>
+      <td>40334.0</td>
+      <td>41373.0</td>
+      <td>41858.0</td>
+      <td>41921.0</td>
+      <td>40675.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Architecture and related services</td>
+      <td>5570.0</td>
+      <td>9146.0</td>
+      <td>9455.0</td>
+      <td>9119.0</td>
+      <td>9781.0</td>
+      <td>8352.0</td>
+      <td>8480.0</td>
+      <td>9515.0</td>
+      <td>9757.0</td>
+      <td>9149.0</td>
+      <td>9090.0</td>
+      <td>8825.0</td>
+      <td>8579.0</td>
+      <td>8464.0</td>
+      <td>8806.0</td>
+      <td>9045.0</td>
+      <td>9296.0</td>
+      <td>9462.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Area, ethnic, cultural, gender, and group studies</td>
+      <td>2579.0</td>
+      <td>3577.0</td>
+      <td>2887.0</td>
+      <td>3021.0</td>
+      <td>4776.0</td>
+      <td>5633.0</td>
+      <td>6160.0</td>
+      <td>7878.0</td>
+      <td>8850.0</td>
+      <td>8275.0</td>
+      <td>7783.0</td>
+      <td>7840.0</td>
+      <td>7720.0</td>
+      <td>7717.0</td>
+      <td>7733.0</td>
+      <td>7771.0</td>
+      <td>7390.0</td>
+      <td>6658.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="to-prepare-the-data-for-analysis-i-first-isolate-the-columns-corresponding-to-the-years-omitting-the-first-column-that-contains-field-names-by-converting-the-years-into-a-list-format-i-ensure-consistency-and-compatibility-for-plotting-and-further-data-manipulation-additionally-i-extract-the-row-of-data-corresponding-to-computer-science-graduates-excluding-the-field-name-column-to-create-a-clean-subset-for-visualization-and-trend-analysis-finally-i-print-the-results-to-verify-that-the-data-has-been-properly-prepared-for-the-next-steps">
+<h1>To prepare the data for analysis, I first isolate the columns corresponding to the years, omitting the first column that contains field names. By converting the years into a list format, I ensure consistency and compatibility for plotting and further data manipulation. Additionally, I extract the row of data corresponding to computer science graduates (excluding the field name column) to create a clean subset for visualization and trend analysis. Finally, I print the results to verify that the data has been properly prepared for the next steps.”<a class="headerlink" href="#to-prepare-the-data-for-analysis-i-first-isolate-the-columns-corresponding-to-the-years-omitting-the-first-column-that-contains-field-names-by-converting-the-years-into-a-list-format-i-ensure-consistency-and-compatibility-for-plotting-and-further-data-manipulation-additionally-i-extract-the-row-of-data-corresponding-to-computer-science-graduates-excluding-the-field-name-column-to-create-a-clean-subset-for-visualization-and-trend-analysis-finally-i-print-the-results-to-verify-that-the-data-has-been-properly-prepared-for-the-next-steps" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years</span> <span class="o">=</span> <span class="n">Years</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  
+
+<span class="n">cs_graduates</span> <span class="o">=</span> <span class="n">CS_Graduate</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> 
+
+<span class="n">years</span> <span class="o">=</span> <span class="n">years</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Years:&quot;</span><span class="p">,</span> <span class="n">years</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CS Graduates:&quot;</span><span class="p">,</span> <span class="n">cs_graduates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Years: [&#39;1970-71&#39;, &#39;1975-76&#39;, &#39;1980-81&#39;, &#39;1985-86&#39;, &#39;1990-91&#39;, &#39;1995-96&#39;, &#39;2000-01&#39;, &#39;2005-06&#39;, &#39;2012-13&#39;, &#39;2013-14&#39;, &#39;2014-15&#39;, &#39;2015-16&#39;, &#39;2016-17&#39;, &#39;2017-18&#39;, &#39;2018-19&#39;, &#39;2019-20&#39;, &#39;2020-21&#39;, &#39;2021-22&#39;]
+CS Graduates: Index([  2388,   5652,  15121,  42337,  25159,  24506,  44142,  47702,  50961,
+        55271,  59586,  64402,  71416,  79597,  88638,  97054, 104883, 108503],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="to-visualize-the-trends-in-the-number-of-computer-science-graduates-over-time-i-created-a-line-plot-using-matplotlib-i-used-the-years-as-the-x-axis-and-the-corresponding-number-of-graduates-as-the-y-axis-the-graph-is-styled-with-markers-to-highlight-each-data-point-and-a-cyan-color-scheme-is-used-to-distinguish-the-line">
+<h1>To visualize the trends in the number of computer science graduates over time, I created a line plot using Matplotlib. I used the years as the x-axis and the corresponding number of graduates as the y-axis. The graph is styled with markers to highlight each data point, and a cyan color scheme is used to distinguish the line.<a class="headerlink" href="#to-visualize-the-trends-in-the-number-of-computer-science-graduates-over-time-i-created-a-line-plot-using-matplotlib-i-used-the-years-as-the-x-axis-and-the-corresponding-number-of-graduates-as-the-y-axis-the-graph-is-styled-with-markers-to-highlight-each-data-point-and-a-cyan-color-scheme-is-used-to-distinguish-the-line" title="Permalink to this heading">#</a></h1>
+<p>I also added a title and labeled the axes to provide context, ensuring the plot is easy to interpret. Gridlines and rotated x-axis labels improve readability, while tight_layout() ensures the elements fit neatly. This visualization effectively captures the growth in computer science graduates from 1970 to 2022.</p>
+<p>By visualizing the trends, I aim to uncover patterns or anomalies in graduation rates and correlate them with industry developments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">cs_graduates</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CS Graduates&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Number of Computer Science Graduates (1970-2022)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Academic Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Graduates&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>    
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>         
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>       
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0bf10429bfd2498470774a6f3d210b38531a2dd40c8734e62db220961ca463d1.png" src="_images/0bf10429bfd2498470774a6f3d210b38531a2dd40c8734e62db220961ca463d1.png" />
+</div>
+</div>
+</section>
+<section id="here-i-filtered-the-dataset-to-include-only-the-years-20172022-for-two-key-reasons">
+<h1>Here, I filtered the dataset to include only the years 2017–2022 for two key reasons.<a class="headerlink" href="#here-i-filtered-the-dataset-to-include-only-the-years-20172022-for-two-key-reasons" title="Permalink to this heading">#</a></h1>
+<p>First, the job listings data I found is only available starting in 2017, making it essential to align the scope of my analysis with this timeframe.</p>
+<p>Second, narrowing the dataset to these recent years allows me to focus on the rapid boom in computer science graduates and the growing difficulty of securing tech jobs during this period.</p>
+</section>
+<section id="this-targeted-approach-enables-me-to-explore-my-hypothesis-more-effectively-by-concentrating-on-the-most-relevant-and-recent-trends-in-the-data-the-filtered-data-is-visualized-in-a-line-graph-to-clearly-illustrate-these-dynamics">
+<h1>This targeted approach enables me to explore my hypothesis more effectively by concentrating on the most relevant and recent trends in the data. The filtered data is visualized in a line graph to clearly illustrate these dynamics.<a class="headerlink" href="#this-targeted-approach-enables-me-to-explore-my-hypothesis-more-effectively-by-concentrating-on-the-most-relevant-and-recent-trends-in-the-data-the-filtered-data-is-visualized-in-a-line-graph-to-clearly-illustrate-these-dynamics" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years_filtered</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2017–18&#39;</span><span class="p">,</span> <span class="s1">&#39;2018–19&#39;</span><span class="p">,</span> <span class="s1">&#39;2019–20&#39;</span><span class="p">,</span> <span class="s1">&#39;2020–21&#39;</span><span class="p">,</span> <span class="s1">&#39;2021–22&#39;</span><span class="p">]</span>  
+<span class="n">cs_graduates_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">71416</span><span class="p">,</span> <span class="mi">79597</span><span class="p">,</span> <span class="mi">88638</span><span class="p">,</span> <span class="mi">97054</span><span class="p">,</span> <span class="mi">108503</span><span class="p">]</span>  
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years_filtered</span><span class="p">,</span> <span class="n">cs_graduates_values</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CS Graduates (2017–2022)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Number of Computer Science Graduates (2017–2022)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Graduates&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/959b12a18d47d83205e0dec4ec88227b7678a7bd141bfbf83b4ea14b34562298.png" src="_images/959b12a18d47d83205e0dec4ec88227b7678a7bd141bfbf83b4ea14b34562298.png" />
+</div>
+</div>
+</section>
+<section id="here-i-import-the-second-dataset-with-number-of-tech-jobs-from-2017-onwards-in-america">
+<h1>Here I import the second dataset with number of tech jobs from 2017 onwards in America<a class="headerlink" href="#here-i-import-the-second-dataset-with-number-of-tech-jobs-from-2017-onwards-in-america" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">employment_tech</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span>
+    <span class="s1">&#39;statistic_id1403635_tech-sector-employment-in-the-us-2017-2023.xlsx&#39;</span><span class="p">,</span>
+    <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span>
+    <span class="n">skiprows</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">employment_tech</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Unnamed: 0   2017  8058855
+0         NaN   2018  8295341
+1         NaN   2019  8529329
+2         NaN   2020  8606573
+3         NaN   2021  8869967
+4         NaN  2022*  9156390
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="following-this-i-noticed-that-there-is-an-asterisk-in-row-4">
+<h1>Following this, I noticed that there is an asterisk in row 4.<a class="headerlink" href="#following-this-i-noticed-that-there-is-an-asterisk-in-row-4" title="Permalink to this heading">#</a></h1>
+<p>I refine the dataset by renaming columns for better readability and addressing formatting issues in the ‘Year’ column. I start by assigning meaningful column names: ‘Unnamed’ (placeholder), ‘Year’, and ‘Jobs’.</p>
+<p>Then, I clean up the ‘Year’ column to remove any unwanted characters, such as the asterisk (‘’), which appears in some entries (e.g., 2022). By converting the ‘Year’ column into integers after removing the asterisks, I ensure the data is properly formatted for numerical analysis and visualization. These steps prepare the dataset for seamless use in subsequent analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">employment_tech</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Unnamed&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Jobs&#39;</span><span class="p">]</span>
+<span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="in-this-step-i-use-pd-to-numeric-to-convert-the-jobs-column-into-a-numeric-data-type-this-is-particularly-useful-for-cleaning-the-data-and-ensuring-that-all-entries-in-this-column-are-properly-formatted-as-numbers-by-setting-errors-coerce-i-handle-any-non-numeric-values-by-replacing-them-with-nan-not-a-number-which-prevents-errors-during-calculations-or-analysis">
+<h1>In this step, I use pd.to_numeric() to convert the ‘Jobs’ column into a numeric data type. This is particularly useful for cleaning the data and ensuring that all entries in this column are properly formatted as numbers. By setting errors=’coerce’, I handle any non-numeric values by replacing them with NaN (Not a Number), which prevents errors during calculations or analysis.<a class="headerlink" href="#in-this-step-i-use-pd-to-numeric-to-convert-the-jobs-column-into-a-numeric-data-type-this-is-particularly-useful-for-cleaning-the-data-and-ensuring-that-all-entries-in-this-column-are-properly-formatted-as-numbers-by-setting-errors-coerce-i-handle-any-non-numeric-values-by-replacing-them-with-nan-not-a-number-which-prevents-errors-during-calculations-or-analysis" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Jobs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Jobs&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="in-the-next-step-i-plot-a-line-graph-to-visualize-the-trends-in-tech-sector-employment-in-the-u-s-from-2017-to-2023-using-matplotlib-i-map-the-years-year-column-on-the-x-axis-and-the-corresponding-number-of-tech-jobs-jobs-column-on-the-y-axis">
+<h1>In the next step, I plot a line graph to visualize the trends in tech sector employment in the U.S. from 2017 to 2023. Using Matplotlib, I map the years (‘Year’ column) on the x-axis and the corresponding number of tech jobs (‘Jobs’ column) on the y-axis.<a class="headerlink" href="#in-the-next-step-i-plot-a-line-graph-to-visualize-the-trends-in-tech-sector-employment-in-the-u-s-from-2017-to-2023-using-matplotlib-i-map-the-years-year-column-on-the-x-axis-and-the-corresponding-number-of-tech-jobs-jobs-column-on-the-y-axis" title="Permalink to this heading">#</a></h1>
+<p>By visualizing the trends, I aim to uncover patterns or anomalies in graduation rates and correlate them with industry developments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean and format the tech employment dataset for analysis</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Jobs&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tech Jobs&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Tech Sector Employment in the U.S. (2017-2023)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Jobs&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">employment_tech</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/705c222b5bf67df04ab196402aa19749dca7282528576f9fe6d90ca056c8a2b9.png" src="_images/705c222b5bf67df04ab196402aa19749dca7282528576f9fe6d90ca056c8a2b9.png" />
+</div>
+</div>
+</section>
+<section id="in-this-step-i-combine-the-two-plotstech-sector-employment-and-computer-science-graduation-ratesinto-a-single-visualization-to-examine-their-correlation-my-hypothesis-is-that-recent-trends-might-reveal-either-a-decrease-in-tech-job-availability-or-a-disproportionately-high-increase-in-graduation-rates-suggesting-potential-oversaturation-in-the-job-market">
+<h1>In this step, I combine the two plots—tech sector employment and computer science graduation rates—into a single visualization to examine their correlation. My hypothesis is that recent trends might reveal either a decrease in tech job availability or a disproportionately high increase in graduation rates, suggesting potential oversaturation in the job market.<a class="headerlink" href="#in-this-step-i-combine-the-two-plotstech-sector-employment-and-computer-science-graduation-ratesinto-a-single-visualization-to-examine-their-correlation-my-hypothesis-is-that-recent-trends-might-reveal-either-a-decrease-in-tech-job-availability-or-a-disproportionately-high-increase-in-graduation-rates-suggesting-potential-oversaturation-in-the-job-market" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="however-i-am-surprised-that-this-is-not-immediately-apparent-in-the-combined-graphs-this-raises-the-question-of-whether-the-way-i-am-displaying-the-data-might-be-obscuring-the-relationship">
+<h1>However, I am surprised that this is not immediately apparent in the combined graphs. This raises the question of whether the way I am displaying the data might be obscuring the relationship.<a class="headerlink" href="#however-i-am-surprised-that-this-is-not-immediately-apparent-in-the-combined-graphs-this-raises-the-question-of-whether-the-way-i-am-displaying-the-data-might-be-obscuring-the-relationship" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Prepare the data</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2017&#39;</span><span class="p">,</span> <span class="s1">&#39;2018&#39;</span><span class="p">,</span> <span class="s1">&#39;2019&#39;</span><span class="p">,</span> <span class="s1">&#39;2020&#39;</span><span class="p">,</span> <span class="s1">&#39;2021&#39;</span><span class="p">,</span> <span class="s1">&#39;2022&#39;</span><span class="p">]</span>
+<span class="n">cs_graduates</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50961</span><span class="p">,</span> <span class="mi">55271</span><span class="p">,</span> <span class="mi">59586</span><span class="p">,</span> <span class="mi">64442</span><span class="p">,</span> <span class="mi">71416</span><span class="p">,</span> <span class="mi">79597</span><span class="p">]</span>
+<span class="n">tech_jobs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8058855</span><span class="p">,</span> <span class="mi">8295341</span><span class="p">,</span> <span class="mi">8529329</span><span class="p">,</span> <span class="mi">8606573</span><span class="p">,</span> <span class="mi">8869967</span><span class="p">,</span> <span class="mi">9156390</span><span class="p">]</span>
+
+<span class="c1"># Create the figure and first axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot CS graduates on the first y-axis</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;CS Graduates&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">cs_graduates</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CS Graduates&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="c1"># Create the second y-axis</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;m&#39;</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Tech Jobs&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">tech_jobs</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tech Jobs&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="c1"># Add titles and grid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Comparison of CS Graduates and Tech Jobs (2017-2022)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/25e337db0d13b0a3f2470af10891d33f8fd43c3b3c3373fd34079ea825c69534.png" src="_images/25e337db0d13b0a3f2470af10891d33f8fd43c3b3c3373fd34079ea825c69534.png" />
+</div>
+</div>
+<p>To address this, I plan to adjust the visualization by calculating and plotting the cumulative growth for both tech jobs and graduation rates over time. By normalizing the data to their respective 2017 values, I can directly compare the relative growth of each metric. This approach provides a clearer picture of how these trends align or diverge over the observed period, making it easier to identify disparities in their growth trajectories.</p>
+<p>This step combines data on graduates and job trends to test the hypothesis more directly. The visualization aims to highlight whether graduate supply aligns with or exceeds job market demand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs_years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2017&#39;</span><span class="p">,</span> <span class="s1">&#39;2018&#39;</span><span class="p">,</span> <span class="s1">&#39;2019&#39;</span><span class="p">,</span> <span class="s1">&#39;2020&#39;</span><span class="p">,</span> <span class="s1">&#39;2021&#39;</span><span class="p">]</span>
+<span class="n">cs_graduates</span> <span class="o">=</span> <span class="p">[</span><span class="mi">71416</span><span class="p">,</span> <span class="mi">79597</span><span class="p">,</span> <span class="mi">88638</span><span class="p">,</span> <span class="mi">97054</span><span class="p">,</span> <span class="mi">108503</span><span class="p">]</span>
+<span class="n">tech_jobs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8058855</span><span class="p">,</span> <span class="mi">8295341</span><span class="p">,</span> <span class="mi">8529329</span><span class="p">,</span> <span class="mi">8606573</span><span class="p">,</span> <span class="mi">8869967</span><span class="p">]</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Year&#39;</span><span class="p">:</span> <span class="n">cs_years</span><span class="p">,</span>
+    <span class="s1">&#39;CS_Graduates&#39;</span><span class="p">:</span> <span class="n">cs_graduates</span><span class="p">,</span>
+    <span class="s1">&#39;Tech_Jobs&#39;</span><span class="p">:</span> <span class="n">tech_jobs</span>
+<span class="p">})</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;CS_Graduates_Cumulative_Growth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CS_Graduates&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CS_Graduates&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Tech_Jobs_Cumulative_Growth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Tech_Jobs&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Tech_Jobs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CS_Graduates_Cumulative_Growth&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CS Graduates Cumulative Growth&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Tech_Jobs_Cumulative_Growth&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tech Jobs Cumulative Growth&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Cumulative Growth in CS Graduates vs Tech Jobs (2017-2021)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Cumulative Growth (%)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ca20a9b0042805c2de976fce602b6ec43869c50f1edc648773d86b831aacfc30.png" src="_images/ca20a9b0042805c2de976fce602b6ec43869c50f1edc648773d86b831aacfc30.png" />
+</div>
+</div>
+<p>These visualizations reveal a noticeable difference in the cumulative growth of computer science graduates and tech jobs between 2017 and 2021. While the number of CS graduates has grown significantly—reaching nearly 150% of its 2017 baseline—the growth in tech jobs has been much slower, rising to only around 110%. This divergence suggests that the supply of graduates may be outpacing the growth in demand, pointing to potential oversaturation in the job market.</p>
+<p>This analysis highlights the value of looking at cumulative growth to better understand these trends. While the tech sector continues to expand, this data raises important questions about whether the market can absorb the increasing number of graduates. It also makes me wonder how specific factors, like skill alignment, geographic distribution of jobs, or changes in industry priorities, might explain this mismatch.</p>
+<p>To build on this, I could explore other metrics, such as the types of roles being created within the tech sector, starting salaries, or even underemployment rates among graduates. It would also be helpful to see how these trends play out over a longer time frame or across different regions to get a more complete picture of the market dynamics.</p>
+<p>On a personal note, experimenting with different ways of graphing the data has been especially helpful in understanding how different ways of presenting data can highlight or obscure patterns</p>
+</section>
+<section id="reflections-and-next-steps">
+<h1>Reflections and Next Steps<a class="headerlink" href="#reflections-and-next-steps" title="Permalink to this heading">#</a></h1>
+<p>This project provided valuable insights into the relationship between the supply of computer science graduates and demand in the tech sector. It also proved my initial hypothesis.</p>
+<p>But while the visualizations reveal some interesting trends, such as the rapid growth in CS graduates compared to slower job growth, further analysis is needed to explore:</p>
+<ul class="simple">
+<li><p>Geographic variations in job availability and graduate supply.</p></li>
+<li><p>The types of roles being created in the tech sector and their alignment with graduates’ skills.</p></li>
+<li><p>External factors, such as economic conditions or immigration policies, impacting the job market.</p></li>
+</ul>
+<p>Future work could incorporate additional datasets, such as salary trends or underemployment rates, to create a more comprehensive picture. This analysis has also highlighted the importance of normalizing data for better comparability, a lesson I plan to apply in future projects.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Project_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project 1</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Project 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-datasets-from-the-u-s-department-of-education-and-labor-market-statistics-i-will-analyze-the-trends-in-computer-science-graduates-from-1970-to-2023-and-compare-them-with-the-growth-in-the-number-of-jobs-in-the-technology-sector-this-analysis-will-explore-the-relationship-between-the-supply-of-graduates-and-the-demand-for-tech-professionals-over-time">Using datasets from the U.S. Department of Education and labor market statistics, I will analyze the trends in computer science graduates from 1970 to 2023 and compare them with the growth in the number of jobs in the technology sector. This analysis will explore the relationship between the supply of graduates and the demand for tech professionals over time.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#firstly-i-import-the-first-dataset-with-bachelor-s-degrees-conferred-by-postsecondary-institutions-by-field-of-study-academic-years-1970-71-through-2021-22">Firstly, I import the first dataset with  Bachelor’s degrees conferred by postsecondary institutions, by field of study; Academic years, 1970-71 through 2021-22</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-section-i-also-import-a-dataset-that-contains-data-on-bachelor-s-degrees-conferred-by-postsecondary-institutions-across-various-fields-of-study-spanning-academic-years-from-197071-to-202122-using-the-pandas-library-in-python-i-load-the-dataset-and-filter-it-to-only-include-rows-corresponding-to-computer-science-graduates">In this section, I also import a dataset that contains data on Bachelor’s degrees conferred by postsecondary institutions across various fields of study, spanning academic years from 1970–71 to 2021–22. Using the pandas library in Python, I load the dataset and filter it to only include rows corresponding to computer science graduates.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#after-loading-the-dataset-and-previewing-its-structure-using-head-i-proceed-to-handle-the-column-headers-representing-years">After loading the dataset and previewing its structure using head(), I proceed to handle the column headers representing years.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#to-prepare-the-data-for-analysis-i-first-isolate-the-columns-corresponding-to-the-years-omitting-the-first-column-that-contains-field-names-by-converting-the-years-into-a-list-format-i-ensure-consistency-and-compatibility-for-plotting-and-further-data-manipulation-additionally-i-extract-the-row-of-data-corresponding-to-computer-science-graduates-excluding-the-field-name-column-to-create-a-clean-subset-for-visualization-and-trend-analysis-finally-i-print-the-results-to-verify-that-the-data-has-been-properly-prepared-for-the-next-steps">To prepare the data for analysis, I first isolate the columns corresponding to the years, omitting the first column that contains field names. By converting the years into a list format, I ensure consistency and compatibility for plotting and further data manipulation. Additionally, I extract the row of data corresponding to computer science graduates (excluding the field name column) to create a clean subset for visualization and trend analysis. Finally, I print the results to verify that the data has been properly prepared for the next steps.”</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#to-visualize-the-trends-in-the-number-of-computer-science-graduates-over-time-i-created-a-line-plot-using-matplotlib-i-used-the-years-as-the-x-axis-and-the-corresponding-number-of-graduates-as-the-y-axis-the-graph-is-styled-with-markers-to-highlight-each-data-point-and-a-cyan-color-scheme-is-used-to-distinguish-the-line">To visualize the trends in the number of computer science graduates over time, I created a line plot using Matplotlib. I used the years as the x-axis and the corresponding number of graduates as the y-axis. The graph is styled with markers to highlight each data point, and a cyan color scheme is used to distinguish the line.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#here-i-filtered-the-dataset-to-include-only-the-years-20172022-for-two-key-reasons">Here, I filtered the dataset to include only the years 2017–2022 for two key reasons.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-targeted-approach-enables-me-to-explore-my-hypothesis-more-effectively-by-concentrating-on-the-most-relevant-and-recent-trends-in-the-data-the-filtered-data-is-visualized-in-a-line-graph-to-clearly-illustrate-these-dynamics">This targeted approach enables me to explore my hypothesis more effectively by concentrating on the most relevant and recent trends in the data. The filtered data is visualized in a line graph to clearly illustrate these dynamics.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#here-i-import-the-second-dataset-with-number-of-tech-jobs-from-2017-onwards-in-america">Here I import the second dataset with number of tech jobs from 2017 onwards in America</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#following-this-i-noticed-that-there-is-an-asterisk-in-row-4">Following this, I noticed that there is an asterisk in row 4.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-step-i-use-pd-to-numeric-to-convert-the-jobs-column-into-a-numeric-data-type-this-is-particularly-useful-for-cleaning-the-data-and-ensuring-that-all-entries-in-this-column-are-properly-formatted-as-numbers-by-setting-errors-coerce-i-handle-any-non-numeric-values-by-replacing-them-with-nan-not-a-number-which-prevents-errors-during-calculations-or-analysis">In this step, I use pd.to_numeric() to convert the ‘Jobs’ column into a numeric data type. This is particularly useful for cleaning the data and ensuring that all entries in this column are properly formatted as numbers. By setting errors=’coerce’, I handle any non-numeric values by replacing them with NaN (Not a Number), which prevents errors during calculations or analysis.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-next-step-i-plot-a-line-graph-to-visualize-the-trends-in-tech-sector-employment-in-the-u-s-from-2017-to-2023-using-matplotlib-i-map-the-years-year-column-on-the-x-axis-and-the-corresponding-number-of-tech-jobs-jobs-column-on-the-y-axis">In the next step, I plot a line graph to visualize the trends in tech sector employment in the U.S. from 2017 to 2023. Using Matplotlib, I map the years (‘Year’ column) on the x-axis and the corresponding number of tech jobs (‘Jobs’ column) on the y-axis.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-this-step-i-combine-the-two-plotstech-sector-employment-and-computer-science-graduation-ratesinto-a-single-visualization-to-examine-their-correlation-my-hypothesis-is-that-recent-trends-might-reveal-either-a-decrease-in-tech-job-availability-or-a-disproportionately-high-increase-in-graduation-rates-suggesting-potential-oversaturation-in-the-job-market">In this step, I combine the two plots—tech sector employment and computer science graduation rates—into a single visualization to examine their correlation. My hypothesis is that recent trends might reveal either a decrease in tech job availability or a disproportionately high increase in graduation rates, suggesting potential oversaturation in the job market.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#however-i-am-surprised-that-this-is-not-immediately-apparent-in-the-combined-graphs-this-raises-the-question-of-whether-the-way-i-am-displaying-the-data-might-be-obscuring-the-relationship">However, I am surprised that this is not immediately apparent in the combined graphs. This raises the question of whether the way I am displaying the data might be obscuring the relationship.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reflections-and-next-steps">Reflections and Next Steps</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Arial
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
