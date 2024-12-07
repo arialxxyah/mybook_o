@@ -10,5 +10,6 @@ setup(
         "sphinx_togglebutton",
         "sphinx_copybutton",
         "myst_nb",
+        "jupyter-book",
     ],
 )
